@@ -17,16 +17,19 @@ html, body {
   align-items: center;
 }
 
+/* 🔥 cadre légèrement plus large pour éviter UI coupée */
 .wrapper {
   position: relative;
-  width: 100vw;
-  height: 56.25vw;
-  max-height: 100vh;
-  max-width: 177.78vh;
+  width: 92vw;
+  height: calc(92vw * 0.5625); /* 16:9 propre */
+  max-height: 92vh;
+  max-width: calc(92vh * 1.777);
   overflow: hidden;
+  background: black;
+  border-radius: 10px; /* optionnel mais arcade look */
 }
 
-/* 🔥 IMPORTANT : PAS de zoom ici */
+/* iframe SANS zoom */
 iframe {
   position: absolute;
   width: 100%;
