@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🎯 cadre 4:3 arcade propre */
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 75vh; /* ratio 4:3 */
+  max-width: 133.33vh;
+  max-height: 100vh;
+  background: black;
+}
+
+/* 🎮 iframe full clean */
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <iframe
+    src="https://retrogamesonline.io/play/double-dragon-usa"
+    scrolling="no"
+    allowfullscreen
+    loading="eager">
+  </iframe>
+</div>
+
+</body>
+</html>
