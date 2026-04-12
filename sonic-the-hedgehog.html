@@ -12,25 +12,28 @@ html, body {
   height: 100%;
   overflow: hidden;
   background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* cadre stable */
 .wrapper {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* iframe SANS scale */
 iframe {
   width: 100%;
   height: 100%;
   border: none;
-}
-
-/* 🔥 overlay clic partout */
-#overlay {
-  position: absolute;
-  inset: 0;
-  background: transparent;
-  z-index: 10;
 }
 </style>
 </head>
@@ -38,16 +41,11 @@ iframe {
 <body>
 
 <div class="wrapper">
-  <iframe id="game" src="https://retrogamesonline.io/play/sonic-the-hedgehog-usa-europe"></iframe>
-
-  <div id="overlay"></div>
+  <iframe 
+    src="https://retrogamesonline.io/play/sonic-the-hedgehog-usa-europe"
+    allowfullscreen>
+  </iframe>
 </div>
-
-<script>
-document.getElementById("overlay").addEventListener("click", () => {
-  document.getElementById("overlay").style.display = "none";
-});
-</script>
 
 </body>
 </html>
