@@ -17,27 +17,19 @@ html, body {
   align-items: center;
 }
 
-/* cadre volontairement PLUS LARGE */
+/* cadre stable */
 .wrapper {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 1280px;
+  height: 720px;
   overflow: hidden;
   background: black;
 }
 
-/* 🔥 clé du fix */
+/* iframe FIXE */
 iframe {
-  position: absolute;
-
-  /* on force une base “desktop stable” */
-  width: 1280px;
-  height: 720px;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(calc(min(1, 100vw / 1280)));
-
+  width: 100%;
+  height: 100%;
   border: none;
 }
 </style>
@@ -46,10 +38,7 @@ iframe {
 <body>
 
 <div class="wrapper">
-  <iframe 
-    src="https://retrogamesonline.io/play/sonic-the-hedgehog-usa-europe"
-    allowfullscreen>
-  </iframe>
+  <iframe src="https://retrogamesonline.io/play/sonic-the-hedgehog-usa-europe"></iframe>
 </div>
 
 </body>
