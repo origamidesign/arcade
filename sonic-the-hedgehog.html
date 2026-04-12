@@ -25,11 +25,11 @@ iframe {
   border: none;
 }
 
-/* overlay clic */
 #overlay {
   position: absolute;
   inset: 0;
-  background: transparent;
+  background: black;
+  opacity: 0.001; /* invisible mais capture clic */
   z-index: 10;
 }
 </style>
@@ -50,10 +50,6 @@ const overlay = document.getElementById("overlay");
 const iframe = document.getElementById("game");
 
 overlay.addEventListener("click", () => {
-  // 🔥 force reload du jeu (équivalent PLAY NOW)
-  iframe.src = iframe.src;
-
-  // enlève l’overlay
   overlay.style.display = "none";
 });
 </script>
