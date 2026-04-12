@@ -1,38 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 html, body {
-  margin:0;
-  padding:0;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  background:black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#game {
-  width:100%;
-  height:100%;
+/* 🎯 cadre 4:3 arcade */
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 75vh; /* 4:3 ratio (75% de 100%) */
+  max-width: 133.33vh; /* maintien ratio */
+  max-height: 100vh;
+}
+
+/* iframe propre */
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 </style>
 </head>
 
 <body>
 
-<div id="game"></div>
-
-<script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
-
-<script>
-EJS_player = "#game";
-EJS_core = "segaMD";
-EJS_startOnLoaded = true;
-EJS_gameUrl = "TON_ROM_URL_ICI";
-</script>
+<div class="wrapper">
+  <iframe 
+    id="iframehtml5"
+    class="d-block iframe-default"
+    src="https://retrogamesonline.io/play/sonic-the-hedgehog-usa-europe"
+    scrolling="no"
+    allowfullscreen>
+  </iframe>
+</div>
 
 </body>
 </html>
