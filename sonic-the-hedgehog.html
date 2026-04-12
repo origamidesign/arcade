@@ -1,1 +1,49 @@
-<iframe id="iframehtml5" class="d-block" width="100%" height="100%" src="https://retrogamesonline.io/play/sonic-the-hedgehog-usa-europe" frameborder="0" border="0" scrolling="no" class="iframe-default" allowfullscreen></iframe>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* cadre qui garde le ratio */
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 ratio */
+  max-height: 100vh;
+  max-width: 177.78vh;
+}
+
+/* iframe toujours bien proportionnée */
+iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <iframe 
+    src="https://retrogamesonline.io/play/sonic-the-hedgehog-usa-europe"
+    allowfullscreen>
+  </iframe>
+</div>
+
+</body>
+</html>
