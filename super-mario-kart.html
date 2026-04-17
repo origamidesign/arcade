@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+/* 🔧 AJUSTEMENTS PIXEL PAR PIXEL */
+:root {
+  --w: 0px;   /* largeur + ou - */
+  --h: 0px;   /* hauteur + ou - */
+  --x: 0px;   /* gauche/droite */
+  --y: 0px;   /* haut/bas */
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -12,26 +21,26 @@ html, body {
   height: 100%;
   overflow: hidden;
   background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 🎯 cadre 4:3 arcade propre */
 .wrapper {
-  position: absolute;
+  position: relative;
 
-  /* TAILLE */
-  width: 100vw;   /* largeur de base */
-  height: 75vh;   /* hauteur de base */
+  /* 🔥 TON CODE + ajustement */
+  width: calc(100vw + var(--w));
+  height: calc(75vh + var(--h));
 
-  /* POSITION */
-  left: 0px;      /* décale horizontalement */
-  top: 0px;       /* décale verticalement */
-
-  /* LIMITES */
   max-width: 133.33vh;
   max-height: 100vh;
 
   background: black;
-  overflow: hidden;
+
+  /* 🔥 déplacement */
+  transform: translate(var(--x), var(--y));
 }
 
 /* 🎮 iframe full clean */
@@ -41,6 +50,7 @@ iframe {
   border: none;
   display: block;
 }
+
 </style>
 </head>
 
