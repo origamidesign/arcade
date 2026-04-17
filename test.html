@@ -5,16 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
-/* 🔧 AJUSTEMENTS */
 :root {
-  --w: 0px;      /* étire le cadre à gauche et droite */
-  --h: 20px;      /* étire le cadre en haut et bas */
-  --x: 0px;      /* déplace le tout gauche/droite */
-  --y: 0px;      /* déplace le tout haut/bas */
-
-  --zoom-x: 1.07;   /* étire horizontal du jeu */
-  --zoom-y: 1.15;   /* étire vertical du jeu */
+  --zoom-x: 1;   /* 1 = normal, 1.02 = plus large, 0.98 = plus étroit */
+  --zoom-y: 1;   /* 1 = normal, 1.02 = plus haut, 0.98 = plus bas */
+  --move-x: 0px; /* déplacement horizontal */
+  --move-y: 0px; /* déplacement vertical */
 }
 
 html, body {
@@ -32,28 +27,27 @@ html, body {
 /* 🎯 cadre 4:3 arcade propre */
 .wrapper {
   position: relative;
-  width: calc(100vw + (var(--w) * 2));
-  height: calc(75vh + (var(--h) * 2));
-  max-width: calc(133.33vh + (var(--w) * 2));
-  max-height: calc(100vh + (var(--h) * 2));
+  width: 100vw;
+  height: 75vh; /* ratio 4:3 */
+  max-width: 133.33vh;
+  max-height: 100vh;
   background: black;
-  overflow: hidden;
-  transform: translate(var(--x), var(--y));
+
+  transform:
+    translate(var(--move-x), var(--move-y))
+    scaleX(var(--zoom-x))
+    scaleY(var(--zoom-y));
+
+  transform-origin: center center;
 }
 
 /* 🎮 iframe full clean */
 iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100%;
   height: 100%;
   border: none;
   display: block;
-  transform: translate(-50%, -50%) scale(var(--zoom-x), var(--zoom-y));
-  transform-origin: center center;
 }
-
 </style>
 </head>
 
