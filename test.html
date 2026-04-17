@@ -8,10 +8,13 @@
 
 /* 🔧 AJUSTEMENTS */
 :root {
-  --w: 0px;   /* étirement horizontal des 2 côtés */
-  --h: 100px;   /* étirement vertical des 2 côtés */
-  --x: 0px;   /* déplacement horizontal */
-  --y: 0px;   /* déplacement vertical */
+  --w: 0px;      /* étire le cadre à gauche et droite */
+  --h: 0px;      /* étire le cadre en haut et bas */
+  --x: 0px;      /* déplace le tout gauche/droite */
+  --y: 0px;      /* déplace le tout haut/bas */
+
+  --zoom-x: 1;   /* zoom horizontal du jeu */
+  --zoom-y: 1;   /* zoom vertical du jeu */
 }
 
 html, body {
@@ -29,32 +32,26 @@ html, body {
 /* 🎯 cadre 4:3 arcade propre */
 .wrapper {
   position: relative;
-
   width: calc(100vw + (var(--w) * 2));
   height: calc(75vh + (var(--h) * 2));
-
   max-width: calc(133.33vh + (var(--w) * 2));
   max-height: calc(100vh + (var(--h) * 2));
-
   background: black;
   overflow: hidden;
-
   transform: translate(var(--x), var(--y));
 }
 
-/* 🎮 iframe étirée depuis le centre */
+/* 🎮 iframe full clean */
 iframe {
   position: absolute;
   top: 50%;
   left: 50%;
-
-  width: calc(100% + (var(--w) * 2));
-  height: calc(100% + (var(--h) * 2));
-
+  width: 100%;
+  height: 100%;
   border: none;
   display: block;
-
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(var(--zoom-x), var(--zoom-y));
+  transform-origin: center center;
 }
 
 </style>
