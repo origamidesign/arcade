@@ -14,26 +14,27 @@ html, body {
   background: black;
 }
 
-/* 🎯 cadre ajusté comme ton autre arcade */
+/* 🎯 cadre 4:3 arcade propre */
 .wrapper {
   position: absolute;
 
-  /* SCALE */
-  width: 93.7vw;
-  height: 70.2vh;
+  /* TAILLE */
+  width: 100vw;   /* largeur de base */
+  height: 75vh;   /* hauteur de base */
 
-  /* centrage horizontal */
-  left: 50%;
-  transform: translateX(-50%);
+  /* POSITION */
+  left: 0px;      /* décale horizontalement */
+  top: 0px;       /* décale verticalement */
 
-  /* OFFSET vertical */
-  top: 2.3vh;
+  /* LIMITES */
+  max-width: 133.33vh;
+  max-height: 100vh;
 
   background: black;
   overflow: hidden;
 }
 
-/* 🎮 iframe */
+/* 🎮 iframe full clean */
 iframe {
   width: 100%;
   height: 100%;
