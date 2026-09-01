@@ -45,8 +45,8 @@ html, body {
 <script type="text/javascript">
   EJS_player = '#game-container';
   EJS_core = 'snes';
-  // ROM du remake Super Nintendo de Dragon Quest III
-  EJS_gameUrl = 'https://archive.org/download/snes-romset-translation-english/Dragon%20Quest%20III%20-%20Soshite%20Densetsu%20he...%20%28Japan%29%20%5BTransl._v1.1_by_DeJap%20%26%20Spikeman%5D.zip';
+  // Lien ROM direct uncompressed pour éviter les erreurs CORS/Network
+  EJS_gameUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://archive.org/download/snes-romset-translation-english/Dragon%20Quest%20III%20-%20Soshite%20Densetsu%20he...%20%28Japan%29%20%5BTransl._v1.1_by_DeJap%20%26%20Spikeman%5D.zip');
   EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
   EJS_startOnLoaded = true;
 </script>
