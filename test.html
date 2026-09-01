@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dragon Quest III - Arcade</title>
+<title>Dragon Quest III (English Translated) - SNES</title>
 
 <style>
 html, body {
@@ -44,8 +44,14 @@ html, body {
 <script type="text/javascript">
   EJS_player = '#game';
   EJS_core = 'snes';
-  // Pointe vers l'archive .zip hébergée sur ton GitHub
-  EJS_gameUrl = 'https://origamidesign.github.io/arcade/dq3.zip';
+  
+  // 1. ROM Japonaise officielle
+  EJS_gameUrl = 'https://origamidesign.github.io/arcade/dq3_jp.sfc';
+  
+  // 2. Patch de traduction anglaise (DeJap) appliqué automatiquement au lancement
+  EJS_biosUrl = ''; 
+  EJS_patchUrl = 'https://origamidesign.github.io/arcade/dq3_en.ips';
+  
   EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
   EJS_startOnLoaded = true;
 </script>
