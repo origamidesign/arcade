@@ -22,14 +22,14 @@ html, body {
 .wrapper {
   position: relative;
   width: 100vw;
-  height: 75vh; /* ratio 4:3 */
+  height: 75vh;
   max-width: 133.33vh;
   max-height: 100vh;
   background: black;
   overflow: hidden;
 }
 
-#game-container {
+#game {
   width: 100%;
   height: 100%;
 }
@@ -39,18 +39,17 @@ html, body {
 <body>
 
 <div class="wrapper">
-  <div id="game-container"></div>
+  <div id="game"></div>
 </div>
 
 <script type="text/javascript">
-  EJS_player = '#game-container';
+  EJS_player = '#game';
   EJS_core = 'snes';
-  // Charge la ROM hébergée directement sur ton GitHub
-  EJS_gameUrl = 'dq3.sfc';
-  EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+  EJS_gameUrl = 'https://myrient.erista.me/files/No-Intro/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Dragon%20Quest%20III%20-%20Soshite%20Densetsu%20he...%20%28Japan%29.zip';
+  EJS_pathtodata = 'https://rawg.io/assets/emulatorjs/data/';
   EJS_startOnLoaded = true;
 </script>
-<script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+<script src="https://rawg.io/assets/emulatorjs/data/loader.js"></script>
 
 </body>
 </html>
