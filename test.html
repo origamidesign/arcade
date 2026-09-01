@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Super Mario World - Arcade</title>
+<title>Super Mario World - Fullscreen</title>
 
 <style>
 html, body {
@@ -26,16 +26,16 @@ html, body {
   max-width: 133.33vh;
   max-height: 100vh;
   background: black;
-  overflow: hidden; /* Rogne le surplus du site */
+  overflow: hidden;
 }
 
-/* 🎮 Zoom et centrage exact sur le jeu */
+/* 🎮 Zoom et rognage sur le lecteur autorise */
 iframe {
   position: absolute;
-  top: -12%;
-  left: -2%;
-  width: 104%;
-  height: 122%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: none;
   display: block;
 }
@@ -45,9 +45,9 @@ iframe {
 <body>
 
 <div class="wrapper">
-  <!-- Utilisation de l'URL d'embed officielle pour éviter l'écran noir -->
+  <!-- URL d'embed officielle autorisee sur les sites externes -->
   <iframe 
-    src="https://www.retrogames.cz/embed.php?game=1105-SNES" 
+    src="https://www.retrogames.cc/embed/16847-super-mario-world-usa.html" 
     scrolling="no"
     allowfullscreen
     loading="eager">
