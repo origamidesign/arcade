@@ -21,7 +21,7 @@ html, body {
 .wrapper {
   position: relative;
   width: 100vw;
-  height: 75vh;
+  height: 75vh; /* Ratio 4:3 */
   max-width: 133.33vh;
   max-height: 100vh;
   background: black;
@@ -44,11 +44,14 @@ html, body {
 <script type="text/javascript">
   EJS_player = '#game';
   EJS_core = 'snes';
-  EJS_gameUrl = 'test'; /* Pointe vers ton fichier nommé test */
-  EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/';
+  
+  // URL absolue exacte vers ta ROM
+  EJS_gameUrl = 'https://origamidesign.github.io/arcade/dq3.sfc';
+  
+  EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
   EJS_startOnLoaded = true;
 </script>
-<script src="https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@latest/data/loader.js"></script>
+<script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 
 </body>
 </html>
