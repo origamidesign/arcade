@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dragon Quest III - SNES</title>
+<title>Dragon Quest III - Arcade</title>
 
 <style>
 html, body {
@@ -18,18 +18,17 @@ html, body {
   align-items: center;
 }
 
-/* 🎯 Cadre 4:3 arcade propre */
 .wrapper {
   position: relative;
   width: 100vw;
-  height: 75vh; /* ratio 4:3 */
+  height: 75vh;
   max-width: 133.33vh;
   max-height: 100vh;
   background: black;
   overflow: hidden;
 }
 
-#game-container {
+#game {
   width: 100%;
   height: 100%;
 }
@@ -39,14 +38,14 @@ html, body {
 <body>
 
 <div class="wrapper">
-  <div id="game-container"></div>
+  <div id="game"></div>
 </div>
 
 <script type="text/javascript">
-  EJS_player = '#game-container';
+  EJS_player = '#game';
   EJS_core = 'snes';
-  // ROM du remake Super Nintendo de Dragon Quest III
-  EJS_gameUrl = 'https://archive.org/download/snes-romset-translation-english/Dragon%20Quest%20III%20-%20Soshite%20Densetsu%20he...%20%28Japan%29%20%5BTransl._v1.1_by_DeJap%20%26%20Spikeman%5D.zip';
+  // Pointe vers l'archive .zip hébergée sur ton GitHub
+  EJS_gameUrl = 'https://origamidesign.github.io/arcade/dq3.zip';
   EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
   EJS_startOnLoaded = true;
 </script>
