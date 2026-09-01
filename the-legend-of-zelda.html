@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+:root {
+  --zoom-x: 1.60;   /* 1 = normal, 1.02 = plus large, 0.98 = plus étroit */ 
+  --zoom-y: 1.60;   /* 1 = normal, 1.02 = plus haut, 0.98 = plus bas */
+  --move-x: 0px; /* déplacement horizontal */
+  --move-y: 220px; /* déplacement vertical */
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -17,7 +24,7 @@ html, body {
   align-items: center;
 }
 
-/* 🎯 cadre 4:3 arcade propre */
+/* 🎯 cadre 4:3 arcade propre */ 
 .wrapper {
   position: relative;
   width: 100vw;
@@ -25,6 +32,13 @@ html, body {
   max-width: 133.33vh;
   max-height: 100vh;
   background: black;
+
+  transform:
+    translate(var(--move-x), var(--move-y))
+    scaleX(var(--zoom-x))
+    scaleY(var(--zoom-y));
+
+  transform-origin: center center;
 }
 
 /* 🎮 iframe full clean */
@@ -36,12 +50,12 @@ iframe {
 }
 </style>
 </head>
-
+ 
 <body>
 
 <div class="wrapper">
   <iframe
-    src="https://gamesfrog.com/games/nes/the-legend-of-zelda/iframe"
+    src="https://console-classics.com/retro-games/the-legend-of-zelda/?embed=1"
     scrolling="no"
     allowfullscreen
     loading="eager">
