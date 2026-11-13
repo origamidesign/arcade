@@ -16,15 +16,17 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-/* 🎯 cadre 4:3 arcade propre */
+
+  /* 🎯 cadre 8:7 NES natif (256x240) */
 .wrapper {
   position: relative;
-  width: 100vw;
-  height: 75vh; /* ratio 4:3 */
-  max-width: 133.33vh;
-  max-height: 100vh;
+  height: 100vh;
+  width: 114.28vh; /* ratio 8:7 (8 / 7 * 100) */
+  max-width: 100vw;
+  max-height: 87.5vw; /* sécurité si l'écran est très étroit (7 / 8 * 100) */
   background: black;
 }
+
 
 /* 🎮 iframe full clean */
 iframe {
